@@ -4,35 +4,25 @@ public class Ejercicio08 {
 
 	public static void main(String[] args) {
 
-		int tabla[][] = new int[3][3];
+		int tabla[][] = {{3,2} , {2,1}};
+		
+		if(simetrica(tabla))
+			System.out.println("Es simetrica");
+		else
+			System.out.println("No es simetrica");
+	}
 
-		int contP = 1;
-
-		int contN = 5;
+	public static boolean simetrica(int tabla[][]) {
+		boolean simetrico = true;
 
 		for (int i = 0; i < tabla.length; i++) {
 			for (int j = 0; j < tabla[i].length; j++) {
-
-				if (contP <= 5) {
-					tabla[i][j] = contP;
-					contP++;
-				}
-
-				if (contP > 5) {
-					tabla[i][j] = contN;
-					contN--;
-				}
-
+				if (tabla[i][j] != tabla[j][i])
+					simetrico = false;
 			}
 		}
 
-		for (int fila[] : tabla) {
-			for (int valor : fila) {
-				System.out.print(valor + "\t");
-			}
-			System.out.println();
-		}
-
+		return simetrico;
 	}
 
 }

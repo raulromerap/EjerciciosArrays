@@ -3,8 +3,22 @@ package ejerciciosarraycon;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Esta clase muestra si las tablas que rellena el usuario son iguales o no
+ * 
+ * @author Raúl Romera
+ */
 public class Ejercicio03 {
 
+	/**
+	 * Esta función se encarga de crear dos tablas de longitud 10 y le pide al
+	 * usuario que las rellene, luego utiliza la funcion Arrays.equals para saber si
+	 * son iguales los valores de las tablas, si es correcto imprime por pantalla un
+	 * mensaje que es correcto y si es incorrecto le manda un mensaje que es
+	 * incorrecto
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Se llama a la función escaner

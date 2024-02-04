@@ -1,7 +1,18 @@
 package ejerciciosarraysin;
 
+/**
+ * Esta clase muestra al usuario una tabla con numeros predeterminados
+ * 
+ * @author Raúl Romera
+ */
 public class Ejercicio04 {
 
+	/**
+	 * Esta función se encarga de hacer un tabla con numeros predeterminados y los
+	 * muestra por pantalla, añadiendose ceros en las celdas que no tienen numeros
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Se crea una variable para una tabla de 12 de longitud con numeros

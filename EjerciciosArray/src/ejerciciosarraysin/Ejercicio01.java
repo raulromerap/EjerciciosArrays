@@ -2,7 +2,21 @@ package ejerciciosarraysin;
 
 import java.util.Random;
 
+/**
+ * Esta clase muestra al usuario una tabla de 10 números aleatorios
+ * 
+ * @author Raúl Romera
+ */
+
 public class Ejercicio01 {
+
+	/**
+	 * Esta función (main) llama a la función Random para generar números aleatorios
+	 * que luego se añaden al array creado, para finalmente mostrarle al usuario la
+	 * tabla con los números
+	 * 
+	 * @param args
+	 */
 
 	public static void main(String[] args) {
 
@@ -27,7 +41,7 @@ public class Ejercicio01 {
 			// aleatorios guardados
 			tabla[i] = nums;
 
-			//Se imprime por pantalla los numeros de la celda
+			// Se imprime por pantalla los numeros de la celda
 			System.out.println(tabla[i]);
 
 		}

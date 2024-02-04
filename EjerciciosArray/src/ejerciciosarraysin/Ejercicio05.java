@@ -2,8 +2,20 @@ package ejerciciosarraysin;
 
 import java.util.Scanner;
 
+/**
+ * Esta clase muestra al usuario una tabla con números insetados por él y luego
+ * le señala cuál es el minimo y el máximo
+ * 
+ * @author Raúl Romera
+ */
 public class Ejercicio05 {
 
+	/**
+	 * Esta función escanea los números que inserte el usuario y los inserta en un
+	 * array, y luego muestra la tabla y un mensaje de cual es el máximo y el mínimo
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Se llama a la clase escaner

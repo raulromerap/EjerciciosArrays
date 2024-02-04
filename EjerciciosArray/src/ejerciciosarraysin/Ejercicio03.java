@@ -2,8 +2,21 @@ package ejerciciosarraysin;
 
 import java.util.Scanner;
 
+/**
+ * Esta clase muestra al usuario un tabla con números que él a introducido pero
+ * del revés
+ * 
+ * @author Raúl Romera
+ */
 public class Ejercicio03 {
 
+	/**
+	 * Esta funcion se encarga de escanear los 10 numeros que inserta el usuario y
+	 * los añade al array de derecha a izquierda (del revés) y luego se lo muestra
+	 * por pantalla recorriendo el array de izquierda a derecha
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Se crea la función escaner
@@ -22,19 +35,19 @@ public class Ejercicio03 {
 
 			// Se imprime por pantalla un mensaje para que el usuario introduzca los numeros
 			System.out.print("Introduzca un número: ");
-			//Se escanea y se guarda los numeros del usuario
+			// Se escanea y se guarda los numeros del usuario
 			numU = sc.nextInt();
 
-			//Se guarda en cada celda el numero del usuario
+			// Se guarda en cada celda el numero del usuario
 			tabla[i] = numU;
 		}
 
-		//Se crea un bucle for-each para recorrer la tabla e imprimer los numeros
+		// Se crea un bucle for-each para recorrer la tabla e imprimer los numeros
 		for (int numero : tabla) {
-			//Se imprime los numeros de cada celda
+			// Se imprime los numeros de cada celda
 			System.out.println(numero);
 		}
-		//Se cierra el escaner
+		// Se cierra el escaner
 		sc.close();
 	}
 }

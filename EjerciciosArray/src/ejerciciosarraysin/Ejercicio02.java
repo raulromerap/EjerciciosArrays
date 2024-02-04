@@ -2,8 +2,20 @@ package ejerciciosarraysin;
 
 import java.util.Scanner;
 
+/**
+ * Esta clase muestra al usuario una tabla de 5 celdas con los números que el
+ * usuario ha introducido
+ * 
+ * @author Raúl Romera
+ */
 public class Ejercicio02 {
 
+	/**
+	 * Esta función main se encarga de escanear los numeros que el usuario
+	 * introduzca para luego imprimirlo por pantalla con el uso de un for-each
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Se crea la funcion escaner

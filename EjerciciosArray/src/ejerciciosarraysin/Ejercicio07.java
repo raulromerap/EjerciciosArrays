@@ -2,72 +2,72 @@ package ejerciciosarraysin;
 
 import java.util.Scanner;
 
+/**
+ * Esta clase muestra un gráfico de la temperatura de cada mes del año
+ * 
+ * @author Raúl Romera
+ */
 public class Ejercicio07 {
 
+	/**
+	 * Esta función se encarga de imprimir por pantalla un grafico de la temperatura
+	 * de cada mes, la temperatura la inserta el usuario y se muestra el grafico
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
-		// Se llama a la funcion escanerç
+		// Se crea una tabla que contiene valores constantes del nombre de los meses del
+		// año
+		final String MESES[] = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+				"Octubre", "Noviembre", "Diciembre" };
+
+		// Se crea un tabla con la longitud de la tabla de los meses la cual almacenará
+		// la temperatura de cada mes
+		int[] temperaturas = new int[MESES.length];
+
+		// Se llama a la funcion Scanner para crear un objeto de este
 		Scanner sc = new Scanner(System.in);
 
-		// Se crea una variable para una tabla de longitud 12
-		int tabla[] = new int[12];
+		// Se crea un bucle que mandará un mensaje de la temperatura de cada mes, donde
+		// el usuario insertará el valor de esta y lo guardará en la celda que le
+		// corresponde
+		for (int i = 0; i < temperaturas.length; i++) {
+			// Se imprime por pantalla el mensaje para que el usuario inserte el valor de la
+			// temperatura de cada mes
+			System.out.println("Introduzca la temperatura de " + MESES[i]);
 
-		// Se crea una variable para guardar la temperatura que ha introduxido el
-		// usuario
-		int temp;
-
-		//Se crea una variable para los meses escritos
-		String mesNom;
-		
-		// Se crea una variable para los meses
-		int mes = 0;
-
-		// Se crea un bucle para asociar los meses con las temperaturas
-		for (int i = 0; i < tabla.length; i++) {
-			mes++;
-			mesNom = mesesEs(mes);
-
-			// Se imprime por pantalla el mensaje para que el usuario inserte la temperatura
-			System.out.print("Introduzca la temperatura de " + mesNom + ": ");
-			// Se escanea el numero
-			temp = sc.nextInt();
-
-			// Se iguala el valor de la temperatura con cada celda correspondiente
-			tabla[i] = temp;
+			// Se escanea y guarda el valor insertado en la tabla según que lugar esté en el
+			// indice
+			temperaturas[i] = sc.nextInt();
 		}
 
-		mes = 0;
-		for(int pos : tabla) {
-			mes++;
-			mesNom = mesesEs(mes);
-			
-			System.out.print(mesNom + "\t|");
-			
-			for(int j = 0; j < pos; j++) {
+		// Se crea un bucle que imprime por pantalla los meses con su temperatura, la
+		// cual se hará un gráfico con asteriscos
+		for (int i = 0; i < MESES.length; i++) {
+
+			// Se añade una condición para cuando la tabla de los meses llegue al indice 9
+			// se imprime el nombre del mes y se imprime una tabulación
+			if (MESES[i].length() >= 9) {
+				// Se imprime por pantalla mes y tabulacion
+				System.out.print(MESES[i] + "\t");
+			}
+			// Si no se cumple el caso se añade el mes y dos tabulaciones
+			else {
+				System.out.print(MESES[i] + "\t\t");
+			}
+			// Se crea un bucle para añadir asteriscos para simular un grafico de
+			// temperatura, en este caso tendrá el valor del numero de la temperatura
+			for (int j = 1; j <= temperaturas[i]; j++) {
+				// Se imprime por pantalla un asterisco
 				System.out.print("*");
 			}
+			// Se imprime un salto de linea
 			System.out.println();
 		}
-		
-		sc.close();
-	}
 
-	static String mesesEs(int mesNum) {
-		String mesEs = switch (mesNum) {
-		case 1 -> "Enero";
-		case 2 -> "Febrero";
-		case 3 -> "Marzo";
-		case 4 -> "Abril";
-		case 5 -> "Mayo";
-		case 6 -> "Junio";
-		case 7 -> "Julio";
-		case 8 -> "Agosto";
-		case 9 -> "Septiembre";
-		case 10 -> "Octubre";
-		case 11 -> "Noviembre";
-		case 12 -> "Diciembre";
-		default -> "";
-		};
-		return mesEs;
+		// Se cierra el escaner
+		sc.close();
+
 	}
 }

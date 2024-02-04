@@ -1,7 +1,13 @@
 package ejerciciosBiDi;
 
+/**
+ * Esta clase muestra al usuario una tabla predeterminada
+ * 
+ * @author Raul Romera
+ */
 public class Ejercicio01 {
 
+	
 	public static void main(String[] args) {
 		
 		// Se crea una variable para generar una tabla bidimensional

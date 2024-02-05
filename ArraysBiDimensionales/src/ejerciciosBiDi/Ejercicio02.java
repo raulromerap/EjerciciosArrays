@@ -2,8 +2,21 @@ package ejerciciosBiDi;
 
 import java.util.Scanner;
 
+/**
+ * Esta clase muestra una tabla creada con las notas de los alumnos y la nota
+ * maxima, media y minima de cada uno de ellos
+ * 
+ * @author Raúl Romera
+ */
 public class Ejercicio02 {
 
+	/**
+	 * Esta función se encarga de crear una tabla de alumnos y notas y pregunta al
+	 * usuario cuanta nota ha sacado el alumno para luego imprimir por pantalla la
+	 * tabla
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Se crea un objeto Scanner a partir de llamar a la funcion Scanner
@@ -109,7 +122,7 @@ public class Ejercicio02 {
 				// iguale la nota maxima al numero del auxiliar
 				if (aux > notaMax)
 					notaMax = aux;
-				
+
 				// Se hace una condicion para cuando el auxiliar sea menor a la nota minima se
 				// iguale la nota minima al numero del auxiliar
 				if (aux < notaMin)
@@ -119,14 +132,14 @@ public class Ejercicio02 {
 				// Se hace la media de las notas del alumno
 				notaMed = suma / 5;
 			}
-			
+
 			// Se imprime por pantalla la nota máxima del alumno correspondiente
 			System.out.println("La nota maxima del Alumno " + cont + " es: " + notaMax);
 			// Se imprime por pantalla la nota minima del alumno correspondiente
 			System.out.println("La nota minima del Alumno " + cont + " es: " + notaMin);
 			// Se imprime por pantalla la nota media del alumno correspondiente
 			System.out.println("La nota media del Alumno " + cont + " es: " + notaMed);
-			
+
 			// Se incrementa el contador
 			cont++;
 			// Se imprime un salto de linea

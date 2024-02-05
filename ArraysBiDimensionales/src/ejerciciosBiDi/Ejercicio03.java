@@ -1,5 +1,11 @@
 package ejerciciosBiDi;
 
+/**
+ * Esta clase muestra una tabla de 5x5 que tiene los valores del indice de
+ * columna mas el indice de fila por 10
+ * 
+ * @author Raúl Romera
+ */
 public class Ejercicio03 {
 
 	// Atributo constante para el número de columnas
@@ -8,7 +14,7 @@ public class Ejercicio03 {
 	// Atributo constante para el número de filas
 	private static final int ROWS = 5;
 
-	// Esta  funcion main crea una tabla e imprime por pantalla el
+	// Esta funcion main crea una tabla e imprime por pantalla el
 	// valor de la tabla recogido en otra funcion
 	public static void main(String[] args) {
 
